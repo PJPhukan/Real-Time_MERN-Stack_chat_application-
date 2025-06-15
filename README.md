@@ -1,4 +1,4 @@
-# [🧩 Real-Time Chat Application – MERN Stack (No Socket.IO)](https://684f16bfcbe011df5ce90caf--chat-application-pjphukan.netlify.app)
+# [🧩 Real-Time Chat Application – MERN Stack (No Socket.IO)](https://chat-application-pjphukan.netlify.app)
 
 A full-stack real-time chat application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js), featuring WebSocket-based communication using the native `ws` module instead of Socket.IO.
 
@@ -102,7 +102,7 @@ npm run dev
 
 ## 🌐 Deployment Links
 
-- 🔗 **Frontend (Vercel/Netlify)**: https://684f16bfcbe011df5ce90caf--chat-application-pjphukan.netlify.app
+- 🔗 **Frontend (Vercel/Netlify)**: https://chat-application-pjphukan.netlify.app
 - 🔗 **Backend (Render)**: https://real-time-mern-stack-chat-application-rke3.onrender.com
 
 ---
