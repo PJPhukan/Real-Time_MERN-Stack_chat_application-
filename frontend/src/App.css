@@ -1,42 +1,218 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100vw;
+	overflow-x: hidden;
+}
+p {
+	padding: 0;
+	margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Home page styling */
+.home-container {
+	background: linear-gradient(to right, #111827, #1f2937, #1e3a8a);
+	color: white;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	width: 100vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.home-background h3 {
+	font-size: 3rem;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
-.card {
-  padding: 2em;
+.home-background p {
+	font-size: 1.2rem;
+	text-align: center;
+	max-width: 600px;
+	color: rgb(148, 148, 148);
 }
 
-.read-the-docs {
-  color: #888;
+.home-background .inputGroup {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	margin-top: 20px;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.inputGroup input {
+	width: 100%;
+	padding: 12px 16px;
+	font-size: 16px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	outline: none;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background-color: #fff;
+	color: #333;
+}
+
+.inputGroup input:focus {
+	border-color: #3b82f6; /* blue-500 */
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Message styling  */
+
+.message-container {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	width: 100%;
+	margin-top: 15px;
+}
+.message-container .message-wrapper {
+	background: #223469;
+	width: 40%;
+	/* border: 2px solid #9fabd9; */
+	border-radius: 10px;
+	padding: 10px 15px;
+}
+
+.message-container.user {
+	align-items: end;
+}
+.message-wrapper .message-header {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+
+	gap: 10px;
+}
+.message-header .username {
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: 900;
+	font-style: bold;
+}
+.message-header .date {
+	font-size: 0.8rem;
+	color: #9fabd9;
+}
+.message-wrapper .text {
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 1.5;
+	margin-top: 5px;
+}
+
+/* chat home styling  */
+.chat-container {
+	background: linear-gradient(to right, #111827, #1f2937, #1e3a8a);
+	color: white;
+	position: relative;
+	overflow-x: hidden;
+	min-height: 100%;
+	width: 100vw;
+	overflow-y: hidden;
+	/* padding: 20px; */
+}
+
+.chat-container .container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.chat-container-header {
+	display: flex;
+	justify-content: start;
+	align-items: start;
+	flex-direction: column;
+	background: #0000006a;
+	position: sticky;
+	top: 20px;
+	left: 20px;
+	border-radius: 20px;
+	padding: 2px 20px;
+}
+
+.chat-container-header .heading {
+	font-size: 2rem;
+	color: #ffffffb0;
+	font-weight: 900;
+	font-weight: 800;
+}
+
+.chat-container-header .sub-heading {
+	font-size: 1rem;
+	color: #ffffff55;
+	font-weight: 500;
+	margin-bottom: 10px;
+	font-weight: 800;
+}
+
+.messages {
+	height: calc(100vh - 220px);
+	overflow-y: auto;
+}
+
+.message-input {
+	display: flex;
+	background: white;
+	width: 100%;
+	gap: 1rem;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.input-message {
+	flex: 1;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	outline: none;
+	font-size: 16px;
+	transition: border-color 0.3s ease;
+	box-shadow: 0.3s ease;
+	background-color: transparent;
+	border: none;
+	color: #333;
+}
+
+
+
+/* Custom scrollbar styling */
+.messages::-webkit-scrollbar {
+	width: 10px;
+}
+
+.messages::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	transition: background 0.3s;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.4);
 }
