@@ -12,7 +12,7 @@ function App() {
 
 	useEffect(() => {
 		if (username && !ws) {
-			const socket = new WebSocket(import.meta.env.VITE_SOCKET_URL);
+			const socket = new WebSocket(import.meta.env.VITE_SOCKET_URL.replace(/^http/, 'ws'));
 
 			socket.onopen = () => {
 				console.log("WebSocket connection established");

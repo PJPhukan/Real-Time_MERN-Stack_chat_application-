@@ -8,7 +8,11 @@ import { socketServer } from "./wsServer.js";
 dotenv.config();
 connectDB();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://684f16bfcbe011df5ce90caf--chat-application-pjphukan.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 //create server
