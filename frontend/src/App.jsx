@@ -62,7 +62,7 @@ function App() {
 			/>
 		);
 	}
-	console.log(messages);
+	// console.log(messages);
 	return (
 		<div className="chat-container">
 			<div className="container">
